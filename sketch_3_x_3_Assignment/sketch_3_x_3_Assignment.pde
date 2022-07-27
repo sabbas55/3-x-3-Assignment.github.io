@@ -7,12 +7,12 @@ PFont titleFont1;
 color blue=#0000FF, resetDefaultInk=#FFFFFF; //not nightMode friendly
 int titleSize;
 float startButtonX, startButtonY, startButtonWidth, startButtonHeight;
-color yellow=#FFFF00, resetButtonColour=#FFFFFF, buttonFill; //Not Night Mode Friendly Colours
+color hotpink=#FF69B4, resetButtonColour=#FFFFFF, buttonFill; //Not Night Mode Friendly Colours
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 String title2= "Quit";
 float titleX2, titleY2, titleWidth2, titleHeight2;
 PFont titleFont2;
-color red=#FF0303;
+color white=#FFFFFF;
 String title3 = "A shrimp's heart is in its head";
 float titleX3, titleY3, titleWidth3, titleHeight3;
 PFont titleFont3;
@@ -62,7 +62,7 @@ void setup ()
   int appWidth = width;
   int appHeight = height;
   if ( width > displayWidth || height > displayHeight ) { //CANVAS in Display Checker
-    //CANVAS Too Big
+    //CANVAS Too large
     appWidth = displayWidth;
     appHeight = displayHeight;
     println("CANVAS needed to be readjusted to fit on your monitor.");
@@ -226,8 +226,6 @@ void setup ()
   rect(rectX7, rectY7, rectWidth, rectHeight);
   rect(rectX8, rectY8, rectWidth, rectHeight);
   rect(rectX9, rectY9, rectWidth, rectHeight);
-  
-  //
   //Single Executed Code
   //Fonts from OS (Operating System)
   titleFont1 = createFont("Harrington", 55); //Verify the font exists in Processing.JAVA
@@ -246,7 +244,6 @@ void setup ()
 //
 void draw() 
 {
-
   //Layout our text space and typographical features
   rect(titleX1, titleY1, titleWidth1, titleHeight1);
   rect( titleX2, titleY2, titleWidth2, titleHeight2);
@@ -266,7 +263,6 @@ void draw()
   textFont(titleFont1, titleSize);
   text(title1, titleX1, titleY1, titleWidth1, titleHeight1);
   fill(resetDefaultInk);
-  //
   //
   fill(blue); //Ink, hexidecimal copied from Color Selector
   textAlign( CENTER, CENTER); //Align X*Y, see Processing.org / Reference
@@ -342,7 +338,7 @@ void draw()
   //
   //Hover-over
   if ( mouseX>startButtonX && mouseX<startButtonX+startButtonWidth && mouseY>startButtonY && mouseY<startButtonY+startButtonHeight ) {
-    buttonFill = yellow;
+    buttonFill = hotpink;
   } else {
     buttonFill = blue;
   }//End Hover-Over
@@ -352,7 +348,7 @@ void draw()
   //
   //Hover-over
   if ( mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight ) {
-    buttonFill = red;
+    buttonFill = white;
   } else {
     buttonFill = blue;
   }//End Hover-Over
@@ -362,7 +358,7 @@ void draw()
   //
   //Hover-over
   if ( mouseX>nextButtonX1 && mouseX<nextButtonX1+nextButtonWidth1 && mouseY>nextButtonY1 && mouseY<nextButtonY1+nextButtonHeight1) {
-    buttonFill = red;
+    buttonFill = white;
   } else {
     buttonFill = blue;
   }//End Hover-Over
@@ -372,7 +368,7 @@ void draw()
   //
    //Hover-over
   if ( mouseX>nextButtonX2 && mouseX<nextButtonX2+nextButtonWidth2 && mouseY>nextButtonY2 && mouseY<nextButtonY2+nextButtonHeight2) {
-    buttonFill = red;
+    buttonFill = white;
   } else {
     buttonFill = blue;
   }//End Hover-Over
@@ -382,7 +378,7 @@ void draw()
   //
    //Hover-over
   if ( mouseX>nextButtonX3 && mouseX<nextButtonX3+nextButtonWidth3 && mouseY>nextButtonY3 && mouseY<nextButtonY3+nextButtonHeight3) {
-    buttonFill = red;
+    buttonFill = white;
   } else {
     buttonFill = blue;
   }//End Hover-Over
@@ -392,7 +388,7 @@ void draw()
   //
   //Hover-over
   if ( mouseX>nextButtonX4 && mouseX<nextButtonX4+nextButtonWidth4 && mouseY>nextButtonY4 && mouseY<nextButtonY4+nextButtonHeight4) {
-    buttonFill = red;
+    buttonFill = white;
   } else {
     buttonFill = blue;
   }//End Hover-Over
@@ -402,7 +398,7 @@ void draw()
   //
   //Hover-over
   if ( mouseX>nextButtonX5 && mouseX<nextButtonX5+nextButtonWidth5 && mouseY>nextButtonY5 && mouseY<nextButtonY5+nextButtonHeight5) {
-    buttonFill = red;
+    buttonFill = white;
   } else {
     buttonFill = blue;
   }//End Hover-Over
@@ -412,7 +408,7 @@ void draw()
   //
    //Hover-over
   if ( mouseX> nextButtonX6 && mouseX<nextButtonX6+nextButtonWidth6 && mouseY>nextButtonY6 && mouseY<nextButtonY6+nextButtonHeight6) {
-    buttonFill = red;
+    buttonFill = white;
   } else {
     buttonFill = blue;
   }//End Hover-Over
@@ -422,7 +418,7 @@ void draw()
   //
    //Hover-over
   if ( mouseX> nextButtonX7 && mouseX<nextButtonX7+nextButtonWidth7 && mouseY>nextButtonY7 && mouseY<nextButtonY7+nextButtonHeight7) {
-    buttonFill = red;
+    buttonFill = white;
   } else {
     buttonFill = blue;
   }//End Hover-Over
@@ -494,8 +490,6 @@ void mousePressed() {
       rect6ON=true;
     }
   }
- 
-   
   if ( mouseX>nextButtonX6 && mouseX<nextButtonX6 +nextButtonWidth6 && mouseY>nextButtonY6 && mouseY<nextButtonY6+nextButtonHeight6){
   if (rect8ON==true) {
       rect8ON=false;
@@ -503,7 +497,6 @@ void mousePressed() {
       rect8ON=true;
     }
   }//End Reset
-  
    if ( mouseX>nextButtonX7 && mouseX<nextButtonX7+nextButtonWidth7 && mouseY>nextButtonY7 && mouseY<nextButtonY7+nextButtonHeight7 ) {
     if (rect7ON==true) {
       rect7ON=false;
@@ -512,5 +505,4 @@ void mousePressed() {
     }
   }
 }//End mousePressed
-//
 //End Main Program
